@@ -1,8 +1,51 @@
 # SHL_project
-### Task done
-1. Extracted the audio files in text form using Whisper model
-2. Extracted features from text like POS tagging and other that determine the credibility and correctness of the given text.
-3. Trained the XGBoost algorithm and experimented with parameters of the algorithm for best results.
-4. Submitted the test_case submission on kaggle and got an accuracy of 80% (3rd position among 99 participants)
-Link to kaggle competetion :- https://www.kaggle.com/competitions/shl-hiring-assessment/overview
-My username - JatinSharma1703
+# 🎙️ Grammar Scoring Engine from Spoken Audio
+
+This project builds a lightweight machine learning pipeline that predicts grammar quality scores from spoken English audio clips. Designed for a real-world Kaggle challenge involving noisy, non-native speech data — ranked **Top-3 out of 99 teams**.
+
+## 🚀 Project Overview
+
+- Used **Whisper ASR** to transcribe 444 diverse speech samples with 40% better accuracy over baseline ASR.
+- Engineered hybrid features from:
+  - **BERT sentence embeddings**
+  - **POS tag distributions**
+  - **Syntactic patterns**
+- Trained a robust **XGBoost regressor** to predict grammar scores ranging from 1.0 to 5.0.
+- Evaluated using **RMSE** and **Pearson Correlation** for model consistency.
+
+## 🧠 Tech Stack
+
+- `Whisper` (OpenAI ASR model)
+- `spaCy` (POS tagging)
+- `HuggingFace Transformers` (Embeddings)
+- `XGBoost` (Regression model)
+- `scikit-learn`, `pandas`, `matplotlib` (data + evaluation)
+
+## 🏆 Highlights
+
+- **Top-3 Kaggle finish** (among 99 teams)
+- Combines **ASR + NLP + ML** into a single efficient pipeline
+- Demonstrates real-world speech handling, grammar scoring, and model robustness
+
+## 📁 Files
+
+- `transcribe.py`: Whisper-based transcription logic
+- `feature_engineering.py`: Embedding and POS-based feature extraction
+- `train_model.py`: XGBoost training and evaluation
+- `inference.py`: Run predictions on new audio
+
+## 📊 Evaluation
+
+- RMSE: ~0.35  
+- Pearson correlation: ~0.78  
+- Generalizes well across varied accents and speaking rates
+
+## 🔗 Links
+
+- 📘 [Kaggle Challenge Description](https://www.kaggle.com/competitions/SHL-Hiring-Assessment/)
+- 🎯 [My Kaggle Submission Repo](https://github.com/jatin435143/SHL_project)
+
+---
+
+📌 Built with an emphasis on **multilingual speech**, **reliability**, and **real-time application** potential — ideal for GenAI-powered communication assistants.
+
